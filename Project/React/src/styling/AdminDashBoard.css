@@ -1,0 +1,23 @@
+.messages-section {
+  margin-top: 20px;
+  background-color: #f8f9fa; /* Light shade of gray */
+  padding: 20px;
+  border-radius: 10px;
+  color: black;
+}
+
+.table-hover tbody tr:hover {
+  background-color: #00ff1e; /* Light gray on hover */
+}
+.table-hover tbody tr:hover td {
+  color: black; /* Change text color on hover */
+}
+.table-hover tbody tr:hover .message-preview {
+  white-space: normal; /* Allow message preview to wrap on hover */
+}
+.message-preview {
+  max-width: 200px; /* Limit message preview width */
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

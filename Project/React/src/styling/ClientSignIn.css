@@ -1,0 +1,51 @@
+.ClientSignInBody {
+  padding-top: 8%;
+  background: linear-gradient(
+    109.6deg,
+    rgb(36, 45, 57) 11.2%,
+    rgb(16, 37, 60) 51.2%,
+    rgb(0, 0, 0) 98.6%
+  );
+}
+.account-block {
+  padding: 0;
+  background-image: url(https://images.unsplash.com/photo-1618193139062-2c5bf4f935b7?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  position: relative;
+}
+.account-block .overlay {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.account-block .account-testimonial {
+  text-align: center;
+  color: #fff;
+  position: absolute;
+  margin: 0 auto;
+  padding: 0 1.75rem;
+  bottom: 3rem;
+  left: 0;
+  right: 0;
+}
+
+.text-theme {
+  color: #5369f8 !important;
+}
+
+.btn-theme {
+  background-color: #5369f8;
+  border-color: #5369f8;
+  color: #fff;
+}
+.ClientSignInContainer {
+  height: 100vh;
+}

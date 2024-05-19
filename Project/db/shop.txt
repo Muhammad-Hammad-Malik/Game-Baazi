@@ -1,0 +1,98 @@
+CREATE TABLE users (
+    id INT PRIMARY KEY IDENTITY(1,1),
+    username VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    location VARCHAR(255),
+    interests VARCHAR(255),
+    dob varchar(255)
+);
+
+CREATE TABLE games (
+    id INT PRIMARY KEY IDENTITY(1,1),
+    name NVARCHAR(255) NOT NULL,
+    price NVARCHAR(255) NOT NULL,
+	description NVARCHAR(255),
+	rating NVARCHAR(255),
+    genre NVARCHAR(100),
+    img_path NVARCHAR(255)
+);
+
+CREATE TABLE consoles (
+    id INT PRIMARY KEY IDENTITY(1,1),
+    name NVARCHAR(255) NOT NULL,
+    price NVARCHAR(255) NOT NULL,
+	variant NVARCHAR(255),
+	generation NVARCHAR(255),
+	description NVARCHAR(255),
+	img_path NVARCHAR(255)
+);
+
+CREATE TABLE accessories (
+    id INT PRIMARY KEY IDENTITY(1,1),
+    name NVARCHAR(255) NOT NULL,
+    price NVARCHAR(255) NOT NULL,
+	type NVARCHAR(255),
+	brand NVARCHAR(255),
+	description NVARCHAR(255),
+	img_path NVARCHAR(255)
+);
+
+CREATE TABLE subscription (
+    id INT PRIMARY KEY IDENTITY(1,1),
+    name NVARCHAR(255) NOT NULL,
+    price NVARCHAR(255) NOT NULL,
+	duration NVARCHAR(255),
+	region NVARCHAR(255),
+	description NVARCHAR(255),
+	img_path NVARCHAR(255)
+);
+
+CREATE TABLE contacts (
+    id INT PRIMARY KEY IDENTITY(1,1),
+    email NVARCHAR(255) NOT NULL,
+    message NVARCHAR(MAX) NOT NULL,
+    datetime DATETIME DEFAULT GETDATE()
+);
+
+CREATE TABLE messages (
+    id INT PRIMARY KEY IDENTITY(1,1),
+    sender NVARCHAR(255) NOT NULL,
+    receiver NVARCHAR(255) NOT NULL,
+    datetime DATETIME DEFAULT GETDATE(),
+    message NVARCHAR(MAX) NOT NULL
+);
+
+CREATE TABLE notifications (
+    id INT PRIMARY KEY IDENTITY(1,1),
+    receiver NVARCHAR(255) NOT NULL,
+    message NVARCHAR(MAX) NOT NULL,
+    datetime DATETIME DEFAULT GETDATE()
+);
+
+CREATE TABLE cart (
+    ItemID INT IDENTITY(1,1) PRIMARY KEY,
+    UserID VARCHAR(255),
+    name VARCHAR(255) NOT NULL,
+    type VARCHAR(256),
+    price VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE orders (
+    orderID INT PRIMARY KEY IDENTITY(1,1),
+    userID INT,
+    status VARCHAR(255),
+    itemNames VARCHAR(MAX),
+    itemPrices VARCHAR(MAX),
+    datePlaced DATETIME DEFAULT GETDATE()
+);
+
+
+
+CREATE TABLE Library (
+    ItemID INT PRIMARY KEY IDENTITY(1,1),
+    userID VARCHAR(50),
+    ItemName VARCHAR(255),
+    code VARCHAR(50),
+    date DATETIME DEFAULT GETDATE()
+);
